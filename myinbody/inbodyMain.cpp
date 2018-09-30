@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include "inbodyClass.h"
+#include "login.h"
 int main() {
 
 	Myinbody object;
-
+	Login user;
 	int x = 0, y = 0;
+	user.loginDisplay();
 	int selectMenu = object.choiceMenu();
 
 	if (selectMenu == 1) {
