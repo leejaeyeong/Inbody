@@ -5,15 +5,15 @@
 
 int main() {
 
-	Login user;
+	//Login user;
 	Myinbody object;
 	Display display;
 
 	display.mainDisplay();
-
+	
 	int x = 0, y = 0;
-	user.loginDisplay();
-	int selectMenu = object.choiceMenu();
+	//user.loginDisplay();
+	/*int selectMenu = object.choiceMenu();
 
 	if (selectMenu == 1) {
 		printf("x값 입력 :");
@@ -29,12 +29,12 @@ int main() {
 	}
 
 	object.drawGraph(x, y);
-	// 그래프 한 눈에 보기 
+	// 그래프 한 눈에 보기 */
 
 
 
 
-
+	
 
 
 }

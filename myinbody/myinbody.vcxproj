@@ -152,6 +152,7 @@
     <ClInclude Include="inbodyClass.h" />
     <ClInclude Include="login.h" />
     <ClInclude Include="Display.h" />
+    <ClInclude Include="MenuButton.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
