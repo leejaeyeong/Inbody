@@ -1,10 +1,16 @@
 #include <stdio.h>
 #include "inbodyClass.h"
 #include "login.h"
+#include "Display.h"
+
 int main() {
 
-	Myinbody object;
 	Login user;
+	Myinbody object;
+	Display display;
+
+	display.mainDisplay();
+
 	int x = 0, y = 0;
 	user.loginDisplay();
 	int selectMenu = object.choiceMenu();
