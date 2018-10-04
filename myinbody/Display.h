@@ -3,12 +3,13 @@
 #include <cstdlib>
 #include <cstring>
 #include "MenuButton.h"
-
+#include "login.h"
+#include "windows.h"
 
 class login;
 
 class Display {
-	
+
 
 public:
 	MenuButton button;
@@ -41,7 +42,7 @@ public:
 		printf("			- function display 구현중 181001 \n");
 		printf("		*************************************************************************************\n\n");
 
-		
+
 		button.addButton("1. 로그인");
 		button.addButton("2. 회원 가입");
 
@@ -67,7 +68,7 @@ public:
 		printf("			  ※계정이 없을 경우 회원 가입을 통해 새로운 계정을 만들어주세요 \n\n");
 		printf("		*************************************************************************************\n\n");
 
-		
+
 		char userId[15];
 		char userPass[15];
 		printf("						[ID] : ");
@@ -75,9 +76,9 @@ public:
 		printf("						[PW] : ");
 		gets_s(userPass, sizeof(userPass));
 
-		user.checkAccount(userId, userPass);
-		
-		
+		user->checkAccount(userId, userPass);
+
+
 	}
 
 	void newAccountDisplay() {
@@ -91,9 +92,29 @@ public:
 
 		/*입력 값 받아서 계쩡 만드는 부분 생성 */
 
-		button.addButton("1. 계정 생성");
+		char userId[15];
+		char userPass[15];
+		printf("						[ID] : ");
+		gets_s(userId, sizeof(userId));
+		printf("						[PW] : ");
+		gets_s(userPass, sizeof(userPass));
 
+		button.addButton("1. 계정 생성");
 		button.addButton("2. 초기화");
+
+		char selectMenu[2];
+		//scanf_s("%d", &selectMenu);
+		gets_s(selectMenu, sizeof(selectMenu));
+
+		if (atoi(selectMenu) == 1) {
+			printf("				* 계정이 생성되었습니다. 로그인 페이지로 이동합니다.*");
+			Sleep(2500);
+			user->newAccount(userId, userPass);
+			loginDisplay();
+		}
+		else if (atoi(selectMenu) == 2) {
+			newAccountDisplay();
+		}
 	}
 
 };
