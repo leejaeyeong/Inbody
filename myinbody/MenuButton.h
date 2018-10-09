@@ -10,7 +10,7 @@ public:
 		unsigned char base = 0xa6;
 		unsigned char symbol[7];
 		int length = strlen(text);
-	
+		printf("%d", length);
 
 		for (int i = 1; i < 7; i++)
 			symbol[i] = 0xa0 + i;
@@ -24,6 +24,7 @@ public:
 		printf("						");
 		for (int i = 0; i < 2; i++) {
 			if (i == 0) {
+			
 				if(length == 9)
 					printf("%c%c     %s      ", base, symbol[2], text);
 				else if(length == 12)

@@ -3,7 +3,7 @@
 #include <cstdlib>
 
 class Myinbody {
-
+	
 public :
 	Myinbody() {}
 	~Myinbody() {}

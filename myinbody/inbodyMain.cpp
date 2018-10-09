@@ -1,14 +1,13 @@
 #include <stdio.h>
-#include "inbodyClass.h"
-#include "login.h"
 #include "Display.h"
+#include "login.h"
+#include "inbodyClass.h"
 
 int main() {
 
-	//Login user;
+	//login user;
 	Myinbody object;
 	Display display;
-
 	display.mainDisplay();
 	
 	int x = 0, y = 0;
